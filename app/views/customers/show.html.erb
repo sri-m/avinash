@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @customer.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @customer.email %>
+</p>
+
+<p>
+  <strong>Cell:</strong>
+  <%= @customer.cell %>
+</p>
+<br/>
+<table width="400px" border="1">
+	<% @customer.orders.each do |o| %>
+		<tr>
+			<td><%= link_to o.oname, o %></td><td><%= o.oprice %></td><td><%= o.oqty %></td>
+		</tr>
+	<% end %>
+</table>
+<br/>
+<%= @customer.orders.count %><br/>
+
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>

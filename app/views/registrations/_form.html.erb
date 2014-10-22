@@ -1,0 +1,11 @@
+<%= semantic_form_for @registration do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :email %>
+    <%= f.input :password %>
+    <%= f.input :confirm_password %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>

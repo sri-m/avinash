@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Samp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script language="javascript" type="text/javascript">
+function clearText(field){
+
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+
+}
+</script>
+</head>
+<body>
+<div id="templatemo_container">
+	<!-- banner -->
+    <%= render :partial => "colleges/banner" %>
+  <!-- end of menu -->
+    <%= render :partial => "colleges/menu" %>
+	<div id="templatemo_content_wrapper">
+    	<div id="templatemo_content">
+      <%#= render :partial => "colleges/latest" %>
+    	<!-- latest blog -->
+                        
+            <div class="margin_bottom_10"></div>
+            
+            <div class="latest_news">
+                
+        </div> <!-- end of a column -->
+        
+        <div class="column_w430 fl vl_divider">
+        	<%= yield %>    
+        </div> <!-- end of a column -->
+        
+       <%#= render :partial => "colleges/category" %>
+        
+        	<!-- category -->
+        
+        
+        <div class="margin_bottom_20 h_divider"></div>        
+        <div class="margin_bottom_20"></div>
+        <%= render :partial => "colleges/images" %>
+       <!-- images -->
+    
+    	<div class="cleaner"></div>
+	</div> <!-- end of wrapper 02 -->        
+    </div> <!-- end of wrapper 01 -->
+    
+    <%= render :partial => "colleges/footer" %>
+</div> <!-- end of container -->
+</body>
+</html>

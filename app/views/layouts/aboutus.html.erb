@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Samp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <script language="javascript" type="text/javascript">
+function clearText(field){
+
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+
+}
+</script>
+</head>
+<body>
+
+<div id="container"> 
+
+  <div id="header">
+    <div class="headtitle">YOUR SITE.COM</div>
+  </div>
+
+  <div id="menu"> 
+    <ul>
+      <li><a href="#" title="">HOME</a></li>
+      <li><a href="#" title="">ABOUT US</a></li>
+      <li><a href="#" title="">NEWS</a></li>
+      <li><a href="#" title="">CONTACT US</a></li>
+      <li><a href="#" title="">LINKS</a></li>
+
+    </ul>
+  </div>
+
+
+  <div id="content"> 
+
+   <%= yield %>
+
+  </div>
+
+
+
+  <div id="footer"> <span>Copyright © 2005 | All Rights Reserved  </span> 
+  </div>
+
+</div>
+</body>
+</html>

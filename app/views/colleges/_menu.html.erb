@@ -1,0 +1,18 @@
+<div id="templatemo_menu">
+        <ul>
+            <li><a href="/" class="current"><span></span>Home</a></li>
+            <li><a href="#"><span></span>Gallery</a></li>
+            <li><a href="#"><span></span>Blog</a></li>
+            <li><a href="#"><span></span>Forum</a></li>            
+            <% if user_signed_in? %>
+            <li>
+            	<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+            </li>
+            <% else %>
+            <li>
+            	<%= link_to('Login', new_user_session_path) %>
+            </li>
+            <% end %>
+            <li><a href="/contacts/new"><span></span>Contact Us</a></li>
+        </ul>   
+	</div>
